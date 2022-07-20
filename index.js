@@ -1,5 +1,4 @@
 let defaultEncrypt = "";
-let newText = document.getElementById("newText");
 
 function getValue(event) {
 	event.preventDefault();
@@ -11,6 +10,8 @@ function getValue(event) {
 	let textReplace = document.getElementById(
 		"encryptWord"
 	).value;
+	let newText =
+		document.getElementById("newText");
 
 	//FUNCTION TO DETERMINE LENGTH OF SELECTED WORDS AND MAKE IT EQUAL TO LENGTH OF ASTERISK
 
