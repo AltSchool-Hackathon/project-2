@@ -1,19 +1,46 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
-    <title>Document</title>
-
-</head>
-
-<body>
-    
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link rel="stylesheet" href="index.css" />
+		<script src="index.js"></script>
+		<title>Document</title>
+	</head>
+	<h1>REDACT</h1>
+	<form action="">
+		<input
+			type="text"
+			placeholder="Make a post"
+			id="post"
+			required
+		/>
+		<input
+			type="text"
+			placeholder="Select What to Redact"
+			id="replacedWord"
+			required
+		/>
+		<input
+			type="text"
+			placeholder="Select what to redact with"
+			id="encryptWord"
+		/>
+		<input
+			onclick="getValue(event)"
+			type="submit"
+			value="REDACT"
+		/>
+	</form>
+	<h2>Post</h2>
+	<p id="newText">Encrypted text goes here</p>
+	<body></body>
 </html>

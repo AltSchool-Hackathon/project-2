@@ -1,0 +1,19 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0 auto;
+	text-align: center;
+}
+form {
+	max-width: 50vw;
+	max-height: max-content;
+	background-color: rgba(128, 128, 128, 0.479);
+	padding: 20px 30px;
+	margin: 0 auto;
+}
+form input {
+	width: 80%;
+	padding: 10px 5px;
+	margin-top: 10px;
+}
