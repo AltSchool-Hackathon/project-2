@@ -13,7 +13,7 @@ function getValue(event) {
 	let newText =
 		document.getElementById("newText");
 
-	//FUNCTION TO DETERMINE LENGTH OF SELECTED WORDS AND MAKE IT EQUAL TO LENGTH OF ASTERISK
+	// FUNCTION TO DETERMINE LENGTH OF SELECTED WORDS AND MAKE IT EQUAL TO LENGTH OF ASTERISK
 
 	let asterisk = function getNoOfAsterisk() {
 		for (
