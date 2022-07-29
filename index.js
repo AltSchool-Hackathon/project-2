@@ -33,4 +33,30 @@ function getValue(event) {
 	);
 
 	newText.textContent = news;
+
+	//Function that converts all text to lower
+
+	let changeCase = function (text) {
+		text.toLowerCase();
+	};
+
+	//Function that replaces multiple words
+
+	// 	let multiple = function replaceMultipleWords() {
+	// 		let textArray = text.split(" ");
+	// 		let  textEncryptArray = textEncrypt.split(" ");
+	// 		let textReplaceArray = textReplace.split(" ");
+
+	// 		let lowerTextArray = textArray.map(e => {changeCase(e)})
+	// 		let lowerTextEncryptArray = textEncryptArray.map(e => { changeCase(e) })
+	// 		let lowerTextReplaceArray = textReplaceArray.map(e => { changeCase(e) })
+
+	// 		for (let i = 0; i < lowerTextEncryptArray.length; i++) {
+	// 			if (lowerTextArray.includes(lowerTextEncryptArray)) {
+	// 				lowerTextArray.replaceAll(lowerTextEncryptArray[i], lowerTextReplaceArray[i])
+	// 			}
+	// 		}
+	// 	}
+
+	// 	multiple()
 }
