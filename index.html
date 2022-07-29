@@ -15,32 +15,17 @@
 		<script src="index.js"></script>
 		<title>Document</title>
 	</head>
-	<h1>REDACT</h1>
-	<form action="">
-		<input
-			type="text"
-			placeholder="Make a post"
-			id="post"
-			required
-		/>
-		<input
-			type="text"
-			placeholder="Select What to Redact"
-			id="replacedWord"
-			required
-		/>
-		<input
-			type="text"
-			placeholder="Select what to redact with"
-			id="encryptWord"
-		/>
-		<input
-			onclick="getValue(event)"
-			type="submit"
-			value="REDACT NOW"
-		/>
-	</form>
-	<h2>Post</h2>
-	<p id="newText">Encrypted text goes here</p>
-	<body></body>
+	<body>
+		<h1>REDACT</h1>
+		<section class="container flex">
+			<form action="">
+				<input type="text" placeholder="Make a post" id="post" required />
+				<input type="text" placeholder="Select What to Redact" id="replacedWord" required />
+				<input type="text" placeholder="Select what to redact with" id="encryptWord" />
+				<input onclick="getValue(event)" type="submit" value="REDACT NOW" />
+			</form>
+			<h2>Post</h2>
+			<p id="newText">Encrypted text goes here</p>
+		</section>
+	</body>
 </html>

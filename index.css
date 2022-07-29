@@ -2,18 +2,30 @@
 	box-sizing: border-box;
 }
 body {
-	margin: 0 auto;
+	/* margin: 0 auto; */
 	text-align: center;
+	min-height: 100vh;
 }
 form {
-	max-width: 50vw;
+	max-width: 900px;
 	max-height: max-content;
 	background-color: rgba(128, 128, 128, 0.479);
 	padding: 20px 30px;
 	margin: 0 auto;
+	width: 80%;
 }
 form input {
 	width: 80%;
 	padding: 10px 5px;
 	margin-top: 10px;
+}
+.flex{
+	display: flex;
+}
+
+.container{
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 80vh;
 }
