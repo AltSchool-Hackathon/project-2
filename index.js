@@ -13,7 +13,7 @@ function getValue(event) {
 	let newText =
 		document.getElementById("newText");
 
-	FUNCTION TO DETERMINE LENGTH OF SELECTED WORDS AND MAKE IT EQUAL TO LENGTH OF ASTERISK
+	//FUNCTION TO DETERMINE LENGTH OF SELECTED WORDS AND MAKE IT EQUAL TO LENGTH OF ASTERISK
 
 	let asterisk = function getNoOfAsterisk() {
 		for (
@@ -42,21 +42,27 @@ function getValue(event) {
 
 	//Function that replaces multiple words
 
-// 	let multiple = function replaceMultipleWords() {
-// 		let textArray = text.split(" ");
-// 		let  textEncryptArray = textEncrypt.split(" ");
-// 		let textReplaceArray = textReplace.split(" ");
+	let multiple = function replaceMultipleWords() {
+		let textArray = text.split(" ");
+		let textEncryptArray = textEncrypt.split(" ");
+		let textReplaceArray = textReplace.split(" ");
 
-// 		let lowerTextArray = textArray.map(e => {changeCase(e)})
-// 		let lowerTextEncryptArray = textEncryptArray.map(e => { changeCase(e) })
-// 		let lowerTextReplaceArray = textReplaceArray.map(e => { changeCase(e) })
+		let lowerTextArray = textArray.map(e => {changeCase(e)})
+		let lowerTextEncryptArray = textEncryptArray.map(e => { changeCase(e) })
+		let lowerTextReplaceArray = textReplaceArray.map(e => { changeCase(e) })
 
-// 		for (let i = 0; i < lowerTextEncryptArray.length; i++) {
-// 			if (lowerTextArray.includes(lowerTextEncryptArray)) {
-// 				lowerTextArray.replaceAll(lowerTextEncryptArray[i], lowerTextReplaceArray[i])
-// 			}
-// 		}	
-// 	}
+		for (let i = 0; i < lowerTextEncryptArray.length; i++) {
+			// if (lowerTextArray.includes(lowerTextEncryptArray)) {
+			// 	lowerTextArray.replaceAll(lowerTextEncryptArray[i], lowerTextReplaceArray[i])
+			// }
+			lowerTextArray.forEach(e => {
+				if (e == lowerTextEncryptArray[i]){
+					return lowerTextArray.join().replace(e, lowerTextReplaceArray[i])
+				}
+			})
+		}	
+	}
 
-// 	multiple()
-// }
+	multiple()
+
+}
