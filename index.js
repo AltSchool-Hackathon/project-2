@@ -1,4 +1,4 @@
-let defaultEncrypt = "";
+let defaultEncrypt = "*****";
 
 function getValue(event) {
 	event.preventDefault();
@@ -13,50 +13,75 @@ function getValue(event) {
 	let newText =
 		document.getElementById("newText");
 
+	let textArray = text.split(" ");
+	let textEncryptArray = textEncrypt.split(" ");
+	let textReplaceArray = textReplace.split(" ");
+
 	// FUNCTION TO DETERMINE LENGTH OF SELECTED WORDS AND MAKE IT EQUAL TO LENGTH OF ASTERISK
 
-	let asterisk = function getNoOfAsterisk() {
-		for (
-			let i = 1;
-			i <= textEncrypt.length;
-			i++
-		) {
-			defaultEncrypt += "*";
-		}
-	};
-
-	asterisk();
-
-	let news = text.replaceAll(
-		textEncrypt,
-		textReplace ? textReplace : defaultEncrypt
-	);
-
-	newText.textContent = news;
+	// let asterisk = function getNoOfAsterisk(i) {
+	// 	for (
+	// 		let j = 0;
+	// 		j <= textEncryptArray[i].length;
+	// 		j++
+	// 	) {
+	// 		if (textReplaceArray[i]) {
+	// 			return;
+	// 		} else {
+	// 			defaultEncrypt += "*";
+	// 			console.log(textEncryptArray[i].length);
+	// 		}
+	// 	}
+	// };
 
 	//Function that converts all text to lower
 
-	let changeCase = function (text) {
-		text.toLowerCase();
+	let changeCase = (text) => text.toLowerCase();
+
+	//Function to clear input field
+
+	let clearField = function () {
+		const inputs = document.querySelectorAll(
+			"#post, #replacedWord, #encryptWord"
+		);
+		inputs.forEach((key) => {
+			key.value = "";
+		});
 	};
 
 	//Function that replaces multiple words
 
-	// 	let multiple = function replaceMultipleWords() {
-	// 		let textArray = text.split(" ");
-	// 		let  textEncryptArray = textEncrypt.split(" ");
-	// 		let textReplaceArray = textReplace.split(" ");
+	let multiple = function replaceMultipleWords() {
+		//Map through array and change to lower case
 
-	// 		let lowerTextArray = textArray.map(e => {changeCase(e)})
-	// 		let lowerTextEncryptArray = textEncryptArray.map(e => { changeCase(e) })
-	// 		let lowerTextReplaceArray = textReplaceArray.map(e => { changeCase(e) })
+		let lowerTextArray = textArray.map((e) =>
+			changeCase(e)
+		);
+		let lowerTextEncryptArray =
+			textEncryptArray.map((e) => changeCase(e));
+		let lowerTextReplaceArray =
+			textReplaceArray.map((e) => changeCase(e));
 
-	// 		for (let i = 0; i < lowerTextEncryptArray.length; i++) {
-	// 			if (lowerTextArray.includes(lowerTextEncryptArray)) {
-	// 				lowerTextArray.replaceAll(lowerTextEncryptArray[i], lowerTextReplaceArray[i])
-	// 			}
-	// 		}
-	// 	}
+		//Map through array and check if there's a match and replace
 
-	// 	multiple()
+		for (
+			let i = 0;
+			i < textEncryptArray.length;
+			i++
+		) {
+			textArray.forEach((j, index) => {
+				if (j == textEncryptArray[i]) {
+					textReplaceArray[i]
+						? (textArray[index] =
+								textReplaceArray[i])
+						: (textArray[index] = defaultEncrypt);
+				}
+			});
+		}
+
+		newText.textContent = textArray.join(" ");
+	};
+
+	multiple();
+	clearField();
 }
