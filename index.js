@@ -52,39 +52,36 @@ function getValue(event) {
 	//Function that replaces multiple words
 
 	let multiple = function replaceMultipleWords() {
-		let textArray = text.split(" ");
-		let textEncryptArray = textEncrypt.split(" ");
-		let textReplaceArray = textReplace.split(" ");
+		//Map through array and change to lower case
 
-		let lowerTextArray = textArray.map((e) => {
-			changeCase(e);
-		});
+		let lowerTextArray = textArray.map((e) =>
+			changeCase(e)
+		);
 		let lowerTextEncryptArray =
-			textEncryptArray.map((e) => {
-				changeCase(e);
-			});
+			textEncryptArray.map((e) => changeCase(e));
 		let lowerTextReplaceArray =
-			textReplaceArray.map((e) => {
-				changeCase(e);
-			});
+			textReplaceArray.map((e) => changeCase(e));
+
+		//Map through array and check if there's a match and replace
 
 		for (
 			let i = 0;
-			i < lowerTextEncryptArray.length;
+			i < textEncryptArray.length;
 			i++
 		) {
-			// if (lowerTextArray.includes(lowerTextEncryptArray)) {
-			// 	lowerTextArray.replaceAll(lowerTextEncryptArray[i], lowerTextReplaceArray[i])
-			// }
-			lowerTextArray.forEach((e) => {
-				if (e == lowerTextEncryptArray[i]) {
-					return lowerTextArray
-						.join()
-						.replace(e, lowerTextReplaceArray[i]);
+			textArray.forEach((j, index) => {
+				if (j == textEncryptArray[i]) {
+					textReplaceArray[i]
+						? (textArray[index] =
+								textReplaceArray[i])
+						: (textArray[index] = defaultEncrypt);
 				}
 			});
 		}
+
+		newText.textContent = textArray.join(" ");
 	};
 
 	multiple();
+	clearField();
 }
