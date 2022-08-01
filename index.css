@@ -64,6 +64,10 @@ input{
 	margin-bottom: 2.7778em;
 }
 
+.btn:hover{
+	background-color: #705cf3;
+}
+
 .result{
 	margin-bottom: 0.5em;
 }
