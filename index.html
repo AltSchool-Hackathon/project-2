@@ -13,19 +13,45 @@
 		/>
 		<link rel="stylesheet" href="index.css" />
 		<script src="index.js"></script>
-		<title>Document</title>
+		<title>Redactr</title>
 	</head>
-	<body>
-		<h1>REDACT</h1>
+	<body class="flex">
 		<section class="container flex">
-			<form action="">
-				<input type="text" placeholder="Make a post" id="post" required />
-				<input type="text" placeholder="Select What to Redact" id="replacedWord" required />
-				<input type="text" placeholder="Select what to redact with" id="encryptWord" />
-				<input onclick="getValue(event)" type="submit" value="REDACT NOW" />
+			<h1 class="logo">Redactr</h1>
+			<form class="flex" action="">
+				<input type="text" class="content" placeholder="Content" id="post" required />
+				<input type="text"  placeholder="Words to scramble" id="replacedWord" required />
+				<input type="text"  placeholder="Words to be replaced with" id="encryptWord" />
+				<input onclick="getValue(event)" class="btn" type="submit"  value="REDACT NOW" />
 			</form>
-			<h2>Post</h2>
-			<p id="newText">Encrypted text goes here</p>
+			<div class="result flex">
+				<h2 class="result">Result</h2>
+				<p id="newText">Encrypted text goes here</p>
+				<div class="stat">
+					<ul class="flex stat-summary">
+						<li>
+							<span>Word scanned</span>
+							<span class="dots"></span>
+							<span class="word-scanned">0</span>
+						</li>
+						<li>
+							<span>Matched words</span>
+							<span class="dots"></span>
+							<span class="matched-words">0</span>
+						</li>
+						<li>
+							<span>Scrambled characters</span>
+							<span class="dots"></span>
+							<span class="scrambled-characters">0</span>
+						</li>
+						<li>
+							<span>Execution time</span>
+							<span class="dots"></span>
+							<span class="execution-time">0</span>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</section>
 	</body>
 </html>
