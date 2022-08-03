@@ -1,6 +1,7 @@
 let defaultEncrypt = "****";
 let totalWordCount;
 let totalWordMatchCount = 0;
+let scrambledWordCount = [];
 
 function getValue(event) {
 	let start = Date.now();
@@ -84,7 +85,9 @@ function getValue(event) {
 		) {
 			lowerTextArray.forEach((j, index) => {
 				if (j == lowerTextEncryptArray[i]) {
-					// asterisk(i);
+					scrambledWordCount.push(
+						lowerTextEncryptArray[i]
+					);
 					textReplaceArray[i]
 						? (textArray[index] =
 								textReplaceArray[i])
@@ -95,11 +98,14 @@ function getValue(event) {
 		}
 		totalWordCount = textArray.length;
 
-		// newText.textContent = textArray.join(" ");
+		newText.textContent = textArray.join(" ");
+
 		wordCount.textContent = totalWordCount;
 		matchCount.textContent = totalWordMatchCount;
 		scrambledCount.textContent =
-			lowerTextEncryptArray.length;
+			scrambledWordCount.join("").length;
+
+		console.log(scrambledWordCount);
 
 		let end = Date.now();
 
@@ -107,5 +113,5 @@ function getValue(event) {
 	};
 
 	multiple();
-	clearField();
+	// clearField();
 }
