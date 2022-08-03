@@ -19,35 +19,76 @@
 		<section class="container flex">
 			<h1 class="logo">Redactr</h1>
 			<form class="flex" action="">
-				<input type="text" class="content" placeholder="Content" id="post" required />
-				<input type="text"  placeholder="Words to scramble" id="replacedWord" required />
-				<input type="text"  placeholder="Words to be replaced with" id="encryptWord" />
-				<input onclick="getValue(event)" class="btn" type="submit"  value="REDACT NOW" />
+				<input
+					type="text"
+					class="content"
+					placeholder="Content"
+					id="post"
+					required
+				/>
+				<input
+					type="text"
+					placeholder="Words to scramble"
+					id="replacedWord"
+					required
+				/>
+				<input
+					type="text"
+					placeholder="Words to be replaced with"
+					id="encryptWord"
+				/>
+				<input
+					onclick="getValue(event)"
+					class="btn"
+					type="submit"
+					value="REDACT NOW"
+				/>
 			</form>
 			<div class="result flex">
 				<h2 class="result">Result</h2>
-				<p id="newText">Encrypted text goes here</p>
+				<p id="newText">
+					Encrypted text goes here
+					<!-- <button onclick="toggle()" id="toggler">
+						show
+					</button> -->
+				</p>
 				<div class="stat">
 					<ul class="flex stat-summary">
 						<li>
 							<span>Word scanned</span>
 							<span class="dots"></span>
-							<span class="word-scanned">0</span>
+							<span
+								class="word-scanned"
+								id="wordCount"
+								>0</span
+							>
 						</li>
 						<li>
 							<span>Matched words</span>
 							<span class="dots"></span>
-							<span class="matched-words">0</span>
+							<span
+								class="matched-words"
+								id="matchCount"
+								>0</span
+							>
 						</li>
 						<li>
 							<span>Scrambled characters</span>
 							<span class="dots"></span>
-							<span class="scrambled-characters">0</span>
+							<span
+								class="scrambled-characters"
+								id="scrambledCount"
+								>0</span
+							>
 						</li>
 						<li>
 							<span>Execution time</span>
 							<span class="dots"></span>
-							<span class="execution-time">0</span>
+							<span
+								class="execution-time"
+								id="timeCount"
+								>0</span
+							>
 						</li>
 					</ul>
 				</div>
