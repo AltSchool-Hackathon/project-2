@@ -95,7 +95,7 @@ function getValue(event) {
 		}
 		totalWordCount = textArray.length;
 
-		newText.textContent = textArray.join(" ");
+		// newText.textContent = textArray.join(" ");
 		wordCount.textContent = totalWordCount;
 		matchCount.textContent = totalWordMatchCount;
 		scrambledCount.textContent =
