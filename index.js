@@ -2,6 +2,7 @@ let defaultEncrypt = "*";
 let totalWordCount;
 let totalWordMatchCount = 0;
 let scrambledWordCount = [];
+let timeUsedCount;
 
 function getValue(event) {
 	let start = Date.now();
@@ -92,7 +93,10 @@ function getValue(event) {
 					lowerTextReplaceArray[i]
 						? (lowerTextArray[index] =
 								lowerTextReplaceArray[i])
-						: (lowerTextArray[index] = defaultEncrypt.repeat(parseInt(j.length)));
+						: (lowerTextArray[index] =
+								defaultEncrypt.repeat(
+									parseInt(j.length)
+								));
 					totalWordMatchCount += 1;
 				}
 			});
@@ -102,8 +106,9 @@ function getValue(event) {
 		let finalResult = lowerTextArray.join(" ");
 
 		//Capitalise the first letter of the sentence.
-		newText.textContent = finalResult.charAt(0).toUpperCase() + finalResult.slice(1)
-		
+		newText.textContent =
+			finalResult.charAt(0).toUpperCase() +
+			finalResult.slice(1);
 
 		wordCount.textContent = totalWordCount;
 		matchCount.textContent = totalWordMatchCount;
@@ -111,8 +116,10 @@ function getValue(event) {
 			scrambledWordCount.join("").length;
 
 		let end = Date.now();
-
-		timeCount.textContent = `${end - start}ms`;
+		timeUsedCount = `${end - start}ms`;
+		timeCount.textContent = timeUsedCount;
+		scrambledWordCount = [];
+		totalWordMatchCount = 0;
 	};
 
 	multiple();
