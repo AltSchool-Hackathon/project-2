@@ -1,4 +1,4 @@
-let defaultEncrypt = "****";
+let defaultEncrypt = "*";
 let totalWordCount;
 let totalWordMatchCount = 0;
 let scrambledWordCount = [];
@@ -67,6 +67,7 @@ function getValue(event) {
 
 	let multiple = function replaceMultipleWords() {
 		//Map through array and change to lower case
+		//to make it case insensitive
 
 		let lowerTextArray = textArray.map((e) =>
 			changeCase(e)
@@ -80,7 +81,7 @@ function getValue(event) {
 
 		for (
 			let i = 0;
-			i < textEncryptArray.length;
+			i < lowerTextEncryptArray.length;
 			i++
 		) {
 			lowerTextArray.forEach((j, index) => {
@@ -88,17 +89,21 @@ function getValue(event) {
 					scrambledWordCount.push(
 						lowerTextEncryptArray[i]
 					);
-					textReplaceArray[i]
-						? (textArray[index] =
-								textReplaceArray[i])
-						: (textArray[index] = defaultEncrypt);
+					lowerTextReplaceArray[i]
+						? (lowerTextArray[index] =
+								lowerTextReplaceArray[i])
+						: (lowerTextArray[index] = defaultEncrypt.repeat(parseInt(j.length)));
 					totalWordMatchCount += 1;
 				}
 			});
 		}
 		totalWordCount = textArray.length;
 
-		newText.textContent = textArray.join(" ");
+		let finalResult = lowerTextArray.join(" ");
+
+		//Capitalise the first letter of the sentence.
+		newText.textContent = finalResult.charAt(0).toUpperCase() + finalResult.slice(1)
+		
 
 		wordCount.textContent = totalWordCount;
 		matchCount.textContent = totalWordMatchCount;
