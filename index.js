@@ -105,8 +105,6 @@ function getValue(event) {
 		scrambledCount.textContent =
 			scrambledWordCount.join("").length;
 
-		console.log(scrambledWordCount);
-
 		let end = Date.now();
 
 		timeCount.textContent = `${end - start}ms`;
