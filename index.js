@@ -35,15 +35,6 @@ function getValue(event) {
 	let textEncryptArray = textEncrypt.split(" ");
 	let textReplaceArray = textReplace.split(" ");
 
-	// FUNCTION TO DETERMINE LENGTH OF SELECTED WORDS AND MAKE IT EQUAL TO LENGTH OF ASTERISK
-
-	// let asterisk = function getNoOfAsterisk(i) {
-	//  for(let j=0; j<)
-	// 	if (!textReplaceArray[i]) {
-	// 		console.log(defaultEncrypt);
-	//  }
-	// };
-
 	//Function that converts all text to lower
 
 	let changeCase = (text) => text.toLowerCase();
