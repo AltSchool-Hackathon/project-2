@@ -123,5 +123,5 @@ function getValue(event) {
 	};
 
 	multiple();
-	// clearField();
+	clearField();
 }
