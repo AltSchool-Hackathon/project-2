@@ -11,6 +11,7 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0"
 		/>
+		<script src="https://kit.fontawesome.com/1fe4beabb2.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="index.css" />
 		<script src="index.js"></script>
 		<title>Redactr</title>
@@ -19,37 +20,49 @@
 		<section class="container flex">
 			<h1 class="logo">Redactr</h1>
 			<form class="flex" action="">
-				<input
-					type="text"
-					class="content"
-					placeholder="Content"
-					id="post"
-					required
-				/>
-				<input
-					type="text"
-					placeholder="Words to scramble"
-					id="replacedWord"
-					required
-				/>
-				<input
-					type="text"
-					placeholder="Words to be replaced with"
-					title="same number of words as words to scramble"
-					id="encryptWord"
-				/>
-				<input
-					onclick="getValue(event)"
-					class="btn"
-					type="submit"
-					value="REDACT NOW"
-				/>
+				<label for="post">
+					<textarea
+						type="text"
+						class="content"
+						placeholder="Content"
+						id="post"
+						required></textarea>
+				</label>
+				<label for="replaceWord">
+					<input
+						type="text"
+						placeholder="Words to scramble"
+						id="replacedWord"
+						required
+					/>
+				</label>
+				<label for="encryptWord">
+					<input
+						type="text"
+						placeholder="Words to be replaced with"
+						title="same number of words as words to scramble"
+						id="encryptWord"
+					/>
+				</label>
+				<label for="button">
+					<input
+						onclick="getValue(event)"
+						class="btn"
+						id="button"
+						type="submit"
+						value="REDACT NOW"
+					/>
+				</label>
 			</form>
+			<div class="special-button flex">
+				<!-- <button class="neumo" title="delete"><i class="fa-solid fa-trash-can"></i></button> -->
+				<button class="neumo" title="refresh"><i class="fa-solid fa-arrows-rotate"></i></button>
+				<button class="neumo" title="copy encrypted text"><i class="fa-solid fa-copy"></i></button>
+			</div>
 			<div class="result flex">
-				<h2 class="result">Result</h2>
-				<p id="newText">
-					Encrypted text goes here
-				</p>
+				<!-- <h2 class="result">Result</h2> -->
+				<textarea id="newText" readonly>Encrypted text goes here</textarea>
+			</div>
 				<!-- <button id="toggler">show</button> -->
 				<div class="stat">
 					<ul class="flex stat-summary">

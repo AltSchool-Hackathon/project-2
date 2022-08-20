@@ -19,6 +19,10 @@ form {
 	flex-direction: column;
 }
 
+/* label {
+	width: 100%;
+} */
+
 .flex{
 	display: flex;
 }
@@ -31,19 +35,17 @@ form {
 }
 
 .logo{
-	margin: 2.5667em 0 1.6667em;
+	margin: 1.6667em 0 1.6667em;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	font-size: 1.875rem;
 	color: #2101E5;
 }
-.content{
-	margin-top: 0;
-}
 
-input{
+
+input, textarea{
 	font-family: inherit;
-	margin-bottom: 4em;
+	margin-bottom: 2em;
 	border-radius: 0.625em;
 	font-size: 0.85rem;
 	font-weight: 300;
@@ -51,30 +53,76 @@ input{
 	padding: 1.333em 1.667em;
 	border: 1px solid #7B7B7B;
 	color: black;
+	width: 100%;
+}
+
+textarea {
+	height: 8em;
+	resize: none;
+}
+
+.content {
+	margin-top: 0;
+	/* line-height: 3.21em; */
+	/* height: 8em; */
 }
 
 .btn{
 	background: #2101E5;
 	color: white;
+	cursor: pointer;
 	border: 0;
 	font-weight: 700;
 	font-size: 1.225rem;
 	line-height: 1.21em;
 	padding: 0.8889em 1.1111em;
-	margin-bottom: 2.7778em;
+	margin-bottom: 1.2em;
 }
 
 .btn:hover{
 	background-color: #705cf3;
 }
 
+.special-button {
+	align-items: center;
+	justify-content: center;
+	margin: 0 0 1.2em;
+	gap: 2em;
+}
+
+.neumo {
+	padding: .5em;
+	cursor: pointer;
+	background: #F5F5F5;
+	box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.16),
+	-10px -10px 10px -1px rgba(255, 255, 255, 0.70);
+	border-radius: 50%;
+	border: none;
+}
+
+i {
+	color: #2101E5;
+	font-size: 1.8rem;
+	font-weight: 500;
+}
+
+.neumo i:hover,
+.neumo i:focus {
+	color: #705cf3;
+}
+
 .result{
 	margin-bottom: 0.5em;
+	width: 100%;
+	margin: 0 auto;
+	width: 70%;
 }
 
 #newText {
-	height: 100px;
+	height: 130px;
 	color: #7B7B7B;
+	width: 100%;
+	text-align: center;
 }
 
 .result,
