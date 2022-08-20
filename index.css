@@ -19,9 +19,6 @@ form {
 	flex-direction: column;
 }
 
-/* label {
-	width: 100%;
-} */
 
 .flex{
 	display: flex;
@@ -63,8 +60,6 @@ textarea {
 
 .content {
 	margin-top: 0;
-	/* line-height: 3.21em; */
-	/* height: 8em; */
 }
 
 .btn{
