@@ -28,10 +28,10 @@ function getValue(event) {
 	let timeCount =
 		document.getElementById("timeCount");
 
-	// let toggler =
-	// 	document.getElementById("toggler");
+	//regular expression that removes all unwanted characters
+	let result = text.replace(/[^0-9a-zA-Z]/g, " ");
 
-	let textArray = text.split(" ");
+	let textArray = result.split(" ");
 	let textEncryptArray = textEncrypt.split(" ");
 	let textReplaceArray = textReplace.split(" ");
 
@@ -41,9 +41,9 @@ function getValue(event) {
 
 	//TOGGLE ENCRYPTION TEXT
 
-	// function toggler (){
-	// 	textContent
-	// }
+	function toggler() {
+		textContent;
+	}
 	//Function to clear input field
 
 	let clearField = function () {
