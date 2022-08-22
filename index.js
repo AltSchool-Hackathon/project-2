@@ -28,6 +28,10 @@ function getValue(event) {
 	let timeCount =
 		document.getElementById("timeCount");
 
+	let refresh =
+		document.getElementById("refresh");
+	let copy = document.getElementById("copy");
+
 	//regular expression that removes all unwanted characters
 	let result = text.replace(/[^0-9a-zA-Z]/g, " ");
 
@@ -38,22 +42,6 @@ function getValue(event) {
 	//Function that converts all text to lower
 
 	let changeCase = (text) => text.toLowerCase();
-
-	//TOGGLE ENCRYPTION TEXT
-
-	function toggler() {
-		textContent;
-	}
-	//Function to clear input field
-
-	let clearField = function () {
-		const inputs = document.querySelectorAll(
-			"#post, #replacedWord, #encryptWord"
-		);
-		inputs.forEach((key) => {
-			key.value = "";
-		});
-	};
 
 	//Function that replaces multiple words
 
@@ -114,5 +102,38 @@ function getValue(event) {
 	};
 
 	multiple();
-	clearField();
+
+	//FUNCTION TO CLEARFIELD
+	let clearField = function () {
+		// const inputs = document.querySelectorAll(
+		// 	"#post, #replacedWord, #encryptWord, #newText"
+		// );
+		// const stats = document.querySelectorAll(
+		// 	"#matchCount, #wordCount, #scrambledCount, #timeCount"
+		// );
+
+		// inputs.forEach((key) => {
+		// 	key.value = " ";
+		// 	console.log(key.value);
+		// });
+
+		// stats.forEach((key) => {
+		// 	key.textContent = "0";
+		// });
+		// console.log(inputs.value);
+		location.reload();
+	};
+
+	//FUNCTION THAT COPIES VALUE OF AN HTML ELEMENT ON CLICK
+	function copyText() {
+		newText.select();
+		document.execCommand("copy");
+	}
+
+	//EVENT  LISTENERS TO TRIGGER ONCLICK EVENTS AND PASS APPROPRIATE FUNCTION
+	copy.addEventListener("click", copyText);
+	document
+		.querySelector("#copy")
+		.addEventListener("click", copy);
+	refresh.addEventListener("click", clearField);
 }
