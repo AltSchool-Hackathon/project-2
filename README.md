@@ -46,3 +46,12 @@ This project was created as a submission for entry in Altschool Africa's [School
 </div>
 
 ## How to Use REDACTr
+- The first step after loading the application is to type in the text you want to have a word scrambled in.
+
+[](./images/step1.png)
+
+- Next, from the text you have input above, you can now select a specific word you need to scramble and also select the word you want to scramble it with.
+
+[](./images/step2.png) | [](./images/step3.png)
+
+- After 
