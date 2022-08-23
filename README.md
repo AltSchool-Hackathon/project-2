@@ -52,6 +52,6 @@ This project was created as a submission for entry in Altschool Africa's [School
 
 - Next, from the text you have input above, you can now select a specific word you need to scramble and also select the word you want to scramble it with.
 
-![](https://github.com/AltSchool-Hackathon/project-2/blob/master/images/step2.png) | [](https://github.com/AltSchool-Hackathon/project-2/blob/master/images/step4.png)
+![](https://github.com/AltSchool-Hackathon/project-2/blob/master/images/step2.png) | ![](https://github.com/AltSchool-Hackathon/project-2/blob/master/images/step4.png)
 
 - After 
