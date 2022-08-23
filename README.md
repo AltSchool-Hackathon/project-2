@@ -62,7 +62,7 @@ This project was created as a submission for entry in Altschool Africa's [School
 
 ![](https://github.com/AltSchool-Hackathon/project-2/blob/master/images/default.png)
 
-- Now, you can see the text with the scrambled word available for you to use. You can also see some statistics regarding the words scanned, how many words were scrambled, and hwo long it took.
+- Now, you can hit the 'redact now' and see the new text with the scrambled word available for you to use. You can also see some statistics regarding the words scanned, how many words were scrambled, and hwo long it took.
 
 ![](https://github.com/AltSchool-Hackathon/project-2/blob/master/images/step4.png)
 
