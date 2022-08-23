@@ -36,12 +36,12 @@ This project was created as a submission for entry in Altschool Africa's [School
 
 <div align="center">
 
-<img src="https://github.com/tuyojr/tuyojr/blob/main/images/vsc.png?raw=true" height="40" width="40">
-<img src="https://github.com/tuyojr/tuyojr/blob/main/images/html.png?raw=true" height="40" width="40">
-<img src="https://github.com/tuyojr/tuyojr/blob/main/images/css.png?raw=true" height="40" width="40">
-<img src="https://github.com/tuyojr/tuyojr/blob/main/images/JS.png?raw=true" height="40" width="40">
+<img src="https://github.com/AltSchool-Hackathon/project-2/blob/master/images/vsc.png?raw=true" height="40" width="40">
+<img src="https://github.com/AltSchool-Hackathon/project-2/blob/master/images/html.png?raw=true" height="40" width="40">
+<img src="https://github.com/AltSchool-Hackathon/project-2/blob/master/images/css.png?raw=true" height="40" width="40">
+<img src="https://github.com/AltSchool-Hackathon/project-2/blob/master/images/JS.png?raw=true" height="40" width="40">
 <img src="https://github.com/tuyojr/tuyojr/blob/main/images/git.png?raw=true" height="40" width="40">
-<img src="https://github.com/tuyojr/tuyojr/blob/main/images/github-pages.png?raw=true" height="40" width="40">
+<img src="https://github.com/AltSchool-Hackathon/project-2/blob/master/images/github-pages.png?raw=true" height="40" width="40">
 
 </div>
 
