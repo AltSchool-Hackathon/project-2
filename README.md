@@ -67,4 +67,4 @@ This project was created as a submission for entry in Altschool Africa's [School
 ![](https://github.com/AltSchool-Hackathon/project-2/blob/master/images/step4.png)
 
 
-Thank you using REDACTr. May the force be with you!
+**Thank you using REDACTr. May the force be with you!**
