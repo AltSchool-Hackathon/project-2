@@ -41,7 +41,7 @@ This project was created as a submission for entry in Altschool Africa's [School
 <img src="https://github.com/AltSchool-Hackathon/project-2/blob/master/images/css.png?raw=true" height="40" width="40">
 <img src="https://github.com/AltSchool-Hackathon/project-2/blob/master/images/JS.png?raw=true" height="40" width="40">
 <img src="https://github.com/tuyojr/tuyojr/blob/main/images/git.png?raw=true" height="40" width="40">
-<img src="https://github.com/AltSchool-Hackathon/project-2/blob/master/images/github-pages.png?raw=true" height="40" width="40">
+<img src="https://github.com/AltSchool-Hackathon/project-2/blob/master/images/github-pages.png?raw=true" height="40" width="70">
 
 </div>
 
