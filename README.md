@@ -1,6 +1,5 @@
 ![AltSchool Africa Logo](https://github.com/tuyojr/AltSchool-Assignments-1/blob/master/AltSchool.svg)
 ![](https://github.com/AltSchool-Hackathon/project-2/blob/master/images/header.png)
-# REDACTr
 
 This is a very simple application that helps users safely share text content on social media by conveniently changing portions of a message a user doesn't want to be made publicly available to other users.
 
